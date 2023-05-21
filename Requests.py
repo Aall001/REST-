@@ -2,8 +2,6 @@
 import requests
 
 status = 'available'
-# r = requests.get(f'https://petstore.swagger.io/v2/pet/findByStatus?status={status}',
-#                  headers= {'accept': 'application/json'})
 
 res = requests.get(f"https://petstore.swagger.io/v2/pet/findByStatus", params={'status': 'available'}, headers={'accept': 'application/json'})
 print('GET-запрос, код статус', res.status_code)
